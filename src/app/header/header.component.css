@@ -1,0 +1,198 @@
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between children */
+  background-color: rgb(37, 37, 37);
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  position: fixed; /* Fixed position to keep it at the top */
+  top: 0; /* Stick to the top */
+  left: 0; /* Stick to the left */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it's above other content */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.hamburger {
+  cursor: pointer;
+  z-index: 1100; /* Ensure it's above other content */
+  margin-right: 20px; /* Space between hamburger and logo */
+}
+
+.hamburger img {
+  width: 30px; /* Adjust size of the menu icon */
+  height: 30px;
+}
+
+/* .logo {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  color: #faf9f9;
+  font-size: 24px;
+} */
+.logo {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  color: #faf9f9;
+  font-size: 24px;
+  background: linear-gradient(45deg, #0fbdf3, #f31562, #cae619); /* Gradient colors */
+  -webkit-background-clip: text; /* Clip background to text */
+  background-clip: text;
+  color: transparent; /* Make text color transparent to show gradient */
+  border: none;
+}
+
+
+.logo img {
+  height: 40px; 
+}
+
+.header-content {
+  flex-grow: 1; /* Allow header content to expand */
+  display: flex;
+  justify-content: center; /* Center the search bar container */
+}
+
+.search-container {
+  display: flex;
+  width: 100%; /* Make the container full width */
+  max-width: 600px; /* Limit the maximum width of the search bar */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden;
+  flex-grow: 1; /* Allow the search bar to expand */
+}
+
+.search-bar input {
+  border: none;
+  padding: 10px 20px;
+  outline: none;
+  font-size: 16px; 
+  width: 100%;
+}
+
+.search-bar .search-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #2b2525;
+  color: white;
+  cursor: pointer;
+  font-size: 16px; /* Match font size of input */
+}
+
+.settings-icon {
+  display: flex;
+  align-items: center;
+  margin-left: 30px; /* Space between search bar and settings icon */
+}
+
+.settings-icon img {
+  height: 28px; /* Slightly larger icon */
+  cursor: pointer;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden; /* Ensure no overflow issues */
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border-radius: 50%; /* Circular container */
+  margin-right: 20px; /* Adjust the margin as needed */
+}
+
+.user-profile img {
+  width: 100%; /* Fill the container */
+  height: 100%; /* Fill the container */
+  object-fit: cover; /* Cover the container while preserving aspect ratio */
+  border-radius: 50%; /* Ensure image is circular */
+}
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  padding-top: 60px; /* Adjusted for spacing below the fixed header */
+  z-index: 1000; /* Ensure it sits above other content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-nav.collapsed {
+  transform: translateX(0);
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.side-nav li {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s;
+}
+
+.side-nav li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+.side-nav li span {
+  color: #333;
+  display: none; /* Hide names by default */
+}
+
+.side-nav.collapsed li span {
+  display: inline-block; /* Show names when menu is open */
+}
+
+.categories {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  background-color: rgb(37, 37, 37);
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 60px; /* Ensure categories start below the fixed header */
+}
+
+
+.category {
+  margin: 5px 10px; /* Adjust spacing around each category */
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #0fbdf3, #f31562, #cae619); /* Gradient background */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+  color: #fff; /* Ensure text is readable on gradient background */
+}
+
+.category:hover {
+  background-color: #e1e1e1;
+}

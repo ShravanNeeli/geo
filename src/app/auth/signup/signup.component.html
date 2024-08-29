@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="form-container">
+        <h1><i>Create an Account</i></h1>
+        <h2>Signup Here:</h2>
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <div class="form-input">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                  ngModel
+                  email>
+            </div>
+  
+            <div class="form-input">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                  ngModel
+                  maxlength="8">
+            </div>
+            
+            <button class="btn" type="submit">Create</button>
+        </form>
+    </div>
+  </div>
+  

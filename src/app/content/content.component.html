@@ -1,0 +1,31 @@
+
+     <div class="container">
+      <!-- filter buttons for filtering content -->
+      <div class="category-buttons">
+        <button class="category" (click)="onCategorySelect('all')">All</button>
+        <button class="category" (click)="onCategorySelect('horror')">Horror</button>
+        <button class="category" (click)="onCategorySelect('comedy')">Comedy</button>
+        <button class="category" (click)="onCategorySelect('adventure')">Adventure</button>
+        <button class="category" (click)="onCategorySelect('documentary')">Documentary</button>
+        <button class="category" (click)="onCategorySelect('action')">Action</button>
+      </div>
+      
+    
+      <div *ngIf="filteredData.length > 0; else noData">
+        <ul>
+             <!-- Loop through each item in the filteredData array -->
+          <li *ngFor="let item of filteredData">
+            <a [routerLink]="['/header/image-detail', item.id]">
+              <img [src]="item.imageUrl" alt="Uploaded Image" *ngIf="item.imageUrl">
+              <h2>{{ item.name }}</h2>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Template to display if there are no items to show -->
+      <ng-template #noData>
+        <p>No data available.</p>
+      </ng-template>
+    </div>
+    
+   

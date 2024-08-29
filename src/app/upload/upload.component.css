@@ -1,0 +1,74 @@
+/* Container styling */
+/* Container styling */
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #0fbdf3, #f31562, #cae619);
+}
+
+
+/* Form styling */
+form {
+  background: rgb(124, 60, 60);
+  padding: 40px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Shadow for prominence */
+  width: 500px; /* Fixed width */
+  color: #fff; /* White text */
+  text-align: center;
+}
+
+/* Input group styling */
+.input {
+  margin-bottom: 20px; /* Spacing between inputs */
+  text-align: left; /* Align labels and inputs to the left */
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 8px; /* Spacing between label and input */
+  font-weight: bold;
+  color: #fff; /* White text for labels */
+}
+
+/* Input text field styling */
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border: 1px solid #555; /* Dark border */
+  border-radius: 6px; /* Slightly rounded corners */
+  font-size: 16px; /* Consistent font size */
+  background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  color: #fff; /* White text color */
+  transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+input[type="text"]:focus {
+  border-color: #e76c37; /* Highlight border color on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 14px; /* Increased padding */
+  border: none;
+  border-radius: 6px; /* Slightly rounded corners */
+  background: #4686a1; /* Dark background color */
+  color: white;
+  font-size: 18px; /* Font size for readability */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover and click effects */
+}
+
+button:hover {
+  background: #830422; /* Highlight button on hover */
+}
+
+button:active {
+  transform: scale(0.98); /* Slightly shrink button on click */
+}

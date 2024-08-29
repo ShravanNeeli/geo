@@ -1,0 +1,118 @@
+<!-- 
+
+
+      <header>
+        <div class="hamburger" (click)="toggleMenu()">
+          <img src="assets/ham.svg" alt="Menu" />
+        </div>
+        
+        <div class="logo">
+         
+          <strong>AmazonPrime</strong>
+        </div>
+      
+        <nav class="side-nav" [ngClass]="{'collapsed': !isMenuOpen}">
+          <ul>
+            <li>
+              <img src="assets/lock.png" alt="Movies">
+              <span *ngIf="!isMenuOpen" style="color: aqua;">Movies</span>
+            </li>
+            <li>
+              <img src="assets/lock.png" alt="Tv-Shows">
+              <span *ngIf="!isMenuOpen">Tv-Shows</span>
+            </li>
+            <li>
+              <img src="assets/lock.png" alt="Web-series">
+              <span *ngIf="!isMenuOpen">Web-series</span>
+            </li>
+            <li>
+              <img src="assets/lock.png" alt="Anime">
+              <span *ngIf="!isMenuOpen">Anime</span>
+            </li>
+            <li>
+              <img src="assets/lock.png" alt="History">
+              <span *ngIf="!isMenuOpen">History</span>
+            </li>
+          </ul>
+        </nav>
+      
+        <div class="header-content">
+          <div class="search-container">
+            <div class="search-bar">
+              
+              <div class="search-bar">
+                <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" />
+                <button class="search-btn" (click)="handleSearch()">🔍</button>
+              </div>
+              
+            </div>
+      
+            <div class="settings-icon" (click)="openSettings()">
+              <img src="assets/upload.svg" alt="upload" />
+            </div>
+          </div>
+        </div>
+      
+        <div class="user-profile" (click)="viewProfile()">
+          <img src="assets/forest.jpg" alt="User Profile" />
+        </div>
+      </header>
+      
+     
+      
+      <router-outlet></router-outlet>
+      
+       -->
+
+       <header>
+        <div class="hamburger" (click)="toggleMenu()">
+          <img src="assets/ham.svg" alt="Menu" />
+        </div>
+        
+        <button class="logo" routerLink="/header">
+          <strong>AmazonPrime</strong>
+        </button>
+      
+        <nav class="side-nav" [ngClass]="{'collapsed': !isMenuOpen}">
+          <ul>
+            <li>
+              <img src="assets/lock.png" alt="Movies">
+              <span *ngIf="!isMenuOpen" style="color: aqua;">Movies</span>
+            </li>
+            <li>
+              <img src="assets/lock.png" alt="Tv-Shows">
+              <span *ngIf="!isMenuOpen">Tv-Shows</span>
+            </li>
+            <li>
+              <img src="assets/lock.png" alt="Web-series">
+              <span *ngIf="!isMenuOpen">Web-series</span>
+            </li>
+            <li>
+              <img src="assets/lock.png" alt="Anime">
+              <span *ngIf="!isMenuOpen">Anime</span>
+            </li>
+            <li>
+              <img src="assets/lock.png" alt="History">
+              <span *ngIf="!isMenuOpen">History</span>
+            </li>
+          </ul>
+        </nav>
+      
+        <div class="header-content">
+          <div class="search-container">
+            <div class="search-bar">
+              <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" />
+              <button class="search-btn" name="search" (click)="handleSearch()">🔍</button>
+            </div>
+      
+            <div class="settings-icon" (click)="upload()">
+              <img src="assets/upload.svg" alt="upload" />
+            </div>
+          </div>
+        </div>
+      
+        <div class="user-profile" (click)="viewProfile()">
+          <img src="assets/forest.jpg" alt="User Profile" />
+        </div>
+      </header>
+      <router-outlet></router-outlet>

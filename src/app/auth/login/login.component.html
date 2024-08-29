@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="app-login">
+        <h1><i>Welcome</i></h1>
+  
+        <!-- Login Form -->
+        <form #form="ngForm" (ngSubmit)="onsubmit(form)">
+            <!-- Email Input -->
+            <div class="form-input">
+                <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                    ngModel
+                    email>
+            </div>
+  
+            <!-- Password Input -->
+            <div class="form-input">
+                <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                    ngModel
+                    maxlength="8">
+            </div>
+  
+            <!-- Submit Button -->
+            <button class="btn" type="submit">Login</button>
+  
+            <!-- Sign Up Navigation -->
+            <p>Do not have an account?
+                <button
+                    class="btn"
+                    type="button"
+                    (click)="toSignup()">Sign Up
+                </button>
+            </p>
+        </form>
+    </div>
+  </div>
+  

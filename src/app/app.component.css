@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; 
+}
+.empty {
+background-color: rgb(33, 32, 32);
+padding-top: 50px ;
+}
+
+.container {
+  background-color: rgb(33, 32, 32);
+  /* max-width: 1200px;  */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Padding around the container */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.container-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four images per row */
+  gap: 30px; /* Adjusted space between images */
+  width: 100%;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-item img {
+  width: 100%; /* Ensure images take up full width of their grid cell */
+  height: auto; /* Maintain aspect ratio */
+  aspect-ratio: 2 / 3; /* Height greater than width */
+  object-fit: cover; /* Ensure images cover the grid area without distortion */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transitions for multiple effects */
+}
+
+
+
+.image-item img:hover {
+  box-shadow: 0 0 20px rgba(244, 184, 3, 0.8); /* Brighter shadow effect */
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  filter: brightness(1.5); /* Increase brightness significantly on hover */
+  z-index: 1; /* Ensure the image is above other content */
+  position: relative; /* Allow shadow to extend beyond the container */
+  border-radius: 20px; /* Round the corners of the image */
+}
+
+.image-label {
+  margin-top: 10px; /* Space between image and label */
+  color: #fff; /* Text color (adjust as needed) */
+  text-align: center; /* Center-align text */
+  font-size: 16px; /* Font size for labels */
+}

@@ -1,0 +1,123 @@
+<!-- <div class="container">
+    <form #uploadForm="ngForm" (ngSubmit)="onSubmit(uploadForm)">
+      <div class="input">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          ngModel
+          required
+        />
+      </div>
+  
+      <div class="input">
+        <label for="category">Category</label>
+        <input
+          type="text"
+          id="category"
+          name="category"
+          ngModel
+          required
+        />
+      </div>
+  
+      <div class="input">
+        <label for="category2">Category 2</label>
+        <input
+          type="text"
+          id="category2"
+          name="category2"
+          ngModel
+        />
+      </div>
+  
+      <div class="input">
+        <label for="file">Choose file</label>
+        <input
+          type="file"
+          id="file"
+          name="file"
+          (change)="onFileChange($event)"
+          required
+        />
+      </div>
+  
+      <div class="input">
+        <button type="submit">Upload</button>
+      </div>
+  
+      <div *ngIf="uploadPercent !== null">
+        <p>Upload Progress: {{ uploadPercent }}%</p>
+      </div>
+  
+      
+    </form>
+  </div>
+   -->
+   <div class="container">
+    <form #uploadForm="ngForm" (ngSubmit)="onSubmit(uploadForm)">
+      <div class="input">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          ngModel
+          required
+        />
+      </div>
+      
+      <div class="input">
+        <label for="category">Category</label>
+        <input
+          type="text"
+          id="category"
+          name="category"
+          ngModel
+          required
+        />
+      </div>
+      
+      <div class="input">
+        <label for="category2">Category 2</label>
+        <input
+          type="text"
+          id="category2"
+          name="category2"
+          ngModel
+        />
+      </div>
+  
+      <!-- New YouTube Trailer URL field -->
+      <div class="input">
+        <label for="youtubeTrailer">YouTube Trailer URL</label>
+        <input
+          type="text"
+          id="youtubeTrailer"
+          name="youtubeTrailer"
+          ngModel
+        />
+      </div>
+      
+      <div class="input">
+        <label for="file">Choose file</label>
+        <input
+          type="file"
+          id="file"
+          name="file"
+          (change)="onFileChange($event)"
+          required
+        />
+      </div>
+      
+      <div class="input">
+        <button type="submit">Upload</button>
+      </div>
+      
+      <div *ngIf="uploadPercent !== null">
+        <p>Upload Progress: {{ uploadPercent }}%</p>
+      </div>
+    </form>
+  </div>
+  

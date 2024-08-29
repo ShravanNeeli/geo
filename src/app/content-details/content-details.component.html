@@ -1,0 +1,67 @@
+<!-- 
+
+   <div class="container">
+    <div *ngIf="imageDetails" class="image-details-container">
+      <h1>{{ imageDetails.name }}</h1>
+      <p><strong>Category:</strong> {{ imageDetails.category }}</p>
+      <p><strong>Category2:</strong> {{ imageDetails.category2 }}</p>
+      <img [src]="imageDetails.imageUrl" alt="Image" *ngIf="imageDetails.imageUrl">
+  
+      
+      <div *ngIf="imageDetails.youtubeTrailerUrl" class="youtube-trailer-container">
+        <h2>Trailer</h2>
+        <iframe
+          [src]="getSanitizedVideoUrl(imageDetails.youtubeTrailerUrl)"
+          frameborder="0"
+          allowfullscreen
+          width="560"
+          height="315">
+        </iframe>
+      </div>
+    </div>
+  
+    <div *ngIf="!imageDetails" class="loading-container">
+      <p>Loading...</p>
+    </div>
+  </div>
+   -->
+
+
+
+   <!-- <div *ngIf="imageDetails">
+    <h1>{{ imageDetails.name }}</h1>
+    <p>Category: {{ imageDetails.category }}</p>
+    <p>Category2: {{ imageDetails.category2 }}</p>
+    <img [src]="imageDetails.imageUrl" alt="{{ imageDetails.name }}" />
+    <iframe *ngIf="getSanitizedVideoUrl()" [src]="getSanitizedVideoUrl()" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div *ngIf="!imageDetails">
+    <div class="loading-container">
+      <p>Loading...</p>
+    </div>
+  </div> -->
+
+
+<!-- content-details.component.html -->
+
+<div class="container">
+  <!-- Display image details when data is available -->
+  <div *ngIf="imageDetails && imageDetails.name; else loadingTemplate" class="image-details-container">
+    <h1>{{ imageDetails.name || 'No Name' }}</h1>
+    <p>Category: {{ imageDetails.category || 'No Category' }}</p>
+    <p>Category2: {{ imageDetails.category2 || 'No Category2' }}</p>
+    <img [src]="imageDetails.imageUrl" alt="{{ imageDetails.name || 'Image' }}" (error)="onImageError()" />
+
+    <div *ngIf="sanitizedYouTubeTrailerUrl" class="youtube-trailer-container">
+      <h2>YouTube Trailer</h2>
+      <iframe [src]="sanitizedYouTubeTrailerUrl" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Template for loading state -->
+  <ng-template #loadingTemplate>
+    <div class="loading-container">
+      <p>Loading...</p>
+    </div>
+  </ng-template>
+</div>
