@@ -1,13 +1,32 @@
 /* Container styling */
-.container {
+/* .container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: url('/assets/forest.jpg') no-repeat center center fixed;
     background-size: cover;
+    padding: 20px; 
+  } */
+  .container {
+    position: relative; /* Make sure container is positioned relative */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px; /* Add padding for responsiveness */
-  }
+}
+
+/* Background image styling */
+.background-image {
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure it covers the container */
+    z-index: -1; /* Place it behind other content */
+}
   
   /* Signup box styling */
   .app-login {
